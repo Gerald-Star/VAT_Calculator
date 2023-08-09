@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <!-- Adding Onsen UI framework -->
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
+    />
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- implementing the Onsen UI framework header topic -->
+    <ons-page>
+      <ons-toolbar>
+        <div class="center">Framework VAT Calculator</div>
+      </ons-toolbar>
+
+      <section style="padding: 8px">
+        <!-- set the first line margin that has Bill Amount input-->
+        <div style="margin-bottom: 20px">
+          <!-- used ons input  -->
+          <ons-input
+            class="ons-input"
+            required
+            id="username"
+            id="name1"
+            style="width: 75%"
+            modifier="underbar"
+            placeholder="Username"
+            float
+          ></ons-input>
+          <br />
+          <!-- used an HTML input text here. -->
+          <input
+            class="text-input text-input--material"
+            placeholder="Bill Amount"
+            type="text"
+            style="width: 75%"
+            required
+            id="billAmount"
+          />
+        </div>
+        <!-- set the second line margin that has bill range-->
+        <div style="margin-bottom: 20px">
+          <ons-range
+            style="width: 75%"
+            value="18"
+            min="0"
+            max="50"
+            step=".5"
+            id="tipRange"
+          >
+          </ons-range>
+          <!-- set the percentage out -->
+          <output id="percentOut">18%</output>
+        </div>
+
+        <div>
+          <ons-button modifier="large" style="width: 75%" id="btnCalculate"
+            >Calculate VAT</ons-button
+          >
+        </div>
+      </section>
+      <!-- end of first section from VAT calculator to button -->
+      <!-- start of second section to display VAT and Total Bill/ Amount calculation -->
+
+      <section style="padding: 8px">
+        <output id="result"></output>
+      </section>
+    </ons-page>
+    <script src="main.js"></script>
+  </body>
+</html>
